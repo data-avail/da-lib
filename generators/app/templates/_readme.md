@@ -19,6 +19,9 @@ Run test
  
 `npm test`
 
+If wanna use with `travis` don't forgate to add service to `services` in 
+`.travis.yml` file.
+
 ## Development
 
 Project contians `tasks` file for Visual Studio Code
