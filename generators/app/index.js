@@ -46,7 +46,11 @@ module.exports = yeoman.generators.Base.extend({
       this.template(
         this.templatePath('_index.ts'),
         this.destinationPath('src/index.ts')
-      );                        
+      );
+      this.template(
+        this.templatePath('_index-node.d.ts'),
+        this.destinationPath('dist/index-node.d.ts')
+      );      
     },
 
     projectfiles: function () {
@@ -85,7 +89,11 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('test'),
         this.destinationPath('test')
-      );      
+      );
+      this.fs.copy(
+        this.templatePath('gulpfile.js'),
+        this.destinationPath('gulpfile.js')
+      );                                                                  
     }
   },
 
